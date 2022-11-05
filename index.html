@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2IT Chatroom</title>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script>
+        var config = {
+            apiKey: "AIzaSyCr0imO0Dj9MQJUaq7ktVvuKMF8FJxl9oY",
+            authDomain: "chatroom-c3437.firebaseapp.com",
+            databaseURL: "https://chatroom-c3437-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "chatroom-c3437",
+            storageBucket: "chatroom-c3437.appspot.com",
+            messagingSenderId: "785183072710",
+            appId: "1:785183072710:web:a69bd3b31b8eed18a552c7"
+        };
+        firebase.initializeApp(config);
+        const db = firebase.firestore();
+    </script>
+    <script src="./script/app.js" defer></script>
+    <script src="./script/chat.js" defer></script>
+    <script src="./script/ui.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"
+        defer></script>
+</head>
+
+<body>
+    <div class="container my-4">
+        <h1 class="my-4 text-center">2IT Chat</h1>
+
+        <div class="chat-rooms mb-3 text-center">
+            <div class="my-2">Velg en chat:</div>
+            <button class="btn" id="ITChat">IT-Chat</button>
+            <button class="btn" id="2ITA">2ITA</button>
+            <button class="btn" id="2ITB">2ITB</button>
+            <button class="btn" id="classified">Classified</button>
+        </div>
+
+        <div class="chat-window">
+            <ul class="chat-list list-group"></ul>
+        </div>
+
+        <form class="new-chat my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Your message:</div>
+                </div>
+                <input type="text" id="message" class="form-control" required>
+                <div class="input-group-append">
+                    <input type="submit" class="btn" value="send">
+                </div>
+            </div>
+        </form>
+
+        <form class="new-name my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Update name:</div>
+                </div>
+                <input type="text" id="name" class="form-control" required>
+                <div class="input-group-append">
+                    <input type="submit" class="btn" value="update">
+                </div>
+            </div>
+            <div class="update-mssg"></div>
+        </form>
+    </div>
+</body>
+
+</html>
