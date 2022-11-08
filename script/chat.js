@@ -39,18 +39,3 @@ class Chatroom {
         }
     }
 }
-
-const chatroom = new Chatroom('classified', 'johan');
-
-chatroom.getChats((data) => {
-    console.log(data);
-})
-
-setTimeout(() => {
-    chatroom.updateRoom('2ITB');
-    chatroom.updateName('bklassing')
-    chatroom.getChats((data) => {
-        console.log(data)
-    });
-    chatroom.addChat('I am retard')
-}, 3000)
