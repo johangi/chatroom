@@ -2,7 +2,7 @@ class ChatUI {
     constructor(list) {
         this.list = list;
     }
-    clear(){
+    clear() {
         this.list.innerHTML = '';
     }
     render(data) {
